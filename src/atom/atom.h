@@ -59,11 +59,11 @@ protected:
     } else {
       g2.setColor(_prevColor);
     }
-    if (DEBUG) drawDebug(g2, x, y);
+    if (mDebug) drawDebug(g2, x, y);
   }
 
   void drawDebug(Graphics2D& g2, float x, float y, bool showDepth = true) {
-    if (!DEBUG) return;
+    if (!mDebug) return;
     const Stroke& st = g2.getStroke();
     Stroke s(abs(1.f / g2.sx()), CAP_BUTT, JOIN_MITER);
     g2.setStroke(s);
@@ -112,7 +112,7 @@ protected:
   }
 
 public:
-  static bool DEBUG;
+  static bool mDebug;
 
   /**
    * The foreground color of the whole box. Child boxes can override this

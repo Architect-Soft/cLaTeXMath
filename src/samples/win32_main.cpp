@@ -2,6 +2,8 @@
 
 #if defined(BUILD_WIN32) && !defined(MEM_CHECK)
 
+#include <windows.h>
+
 #include "latex.h"
 #include "platform/gdi_win/graphic_win32.h"
 #include "samples.h"
@@ -13,7 +15,6 @@
 #include <gdiplus.h>
 #include <objidl.h>
 #include <tchar.h>
-#include <windows.h>
 
 #define ID_SETTER 256
 #define ID_CANVAS 512
@@ -139,15 +140,16 @@ void init() {
   _render = LaTeX::parse(L"\\text{What a beautiful day}", 720, _size, _size / 3.f, _color);
 }
 
+const wchar_t SAMPLES[] = L"det(A) = \\forall_{ i \\in \\{1, \\dots, n\\} }\\sum_{ j = 1 }^ {n} (-1)^ { i + j }\\hspace{ .3em }a_{ ij } \\hspace{ .3em }det(A_{ ij })";
+
 void HandleRandom() {
   srand(time(NULL));
-  int idx = rand() % tex::SAMPLES_COUNT;
   if (_render != nullptr) {
     delete _render;
   }
   RECT r;
   GetClientRect(hCanvas, &r);
-  _render = LaTeX::parse(wstring(tex::SAMPLES[idx]), r.right - r.left, _size, _size / 3.f, _color);
+  _render = LaTeX::parse(wstring(SAMPLES /*tex::SAMPLES[idx]*/), r.right - r.left, _size, _size / 3.f, _color);
   InvalidateRect(hCanvas, NULL, TRUE);
   UpdateWindow(hCanvas);
 }

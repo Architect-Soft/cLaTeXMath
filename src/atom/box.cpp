@@ -11,7 +11,7 @@
 using namespace std;
 using namespace tex;
 
-bool Box::DEBUG = false;
+bool Box::mDebug = false;
 
 /************************************** factory implementation ************************************/
 

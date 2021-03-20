@@ -11,7 +11,7 @@ static const float POS_INF = std::numeric_limits<float>::infinity();
 /** Negative infinity */
 static const float NEG_INF = -POS_INF;
 /** Max float value */
-static const float F_MAX = std::numeric_limits<float>::max();
+static const float F_MAX = (std::numeric_limits<float>::max)();
 /** Min float value */
 static const float F_MIN = -F_MAX;
 /** Pi */

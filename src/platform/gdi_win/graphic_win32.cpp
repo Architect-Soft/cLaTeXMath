@@ -2,12 +2,12 @@
 
 #if defined(BUILD_WIN32) && !defined(MEM_CHECK)
 
-#include "platform/gdi_win/graphic_win32.h"
+#include <windows.h>
+#include <gdiplus.h>
 
 #include <sstream>
 
-#include <gdiplus.h>
-#include <windows.h>
+#include "platform/gdi_win/graphic_win32.h"
 
 using namespace std;
 using namespace tex;
