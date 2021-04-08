@@ -130,7 +130,7 @@ TeXRender* LaTeX::parse(const wstring& latex, int width, float textSize, float l
   _formula->setLaTeX(latex);
   TeXRender* render = _builder->setStyle(STYLE_DISPLAY)
                           .setTextSize(textSize)
-                          .setWidth(UNIT_PIXEL, width, align)
+                          .setWidth(UNIT_PIXEL, static_cast<float>(width), align)
                           .setIsMaxWidth(lined)
                           .setLineSpace(UNIT_PIXEL, lineSpace)
                           .setForeground(fg)

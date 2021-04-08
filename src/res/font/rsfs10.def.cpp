@@ -2,7 +2,7 @@
 
 DEF_FONT(rsfs10, fonts/maths/rsfs10.ttf, 0)
 
-xHeight(0.233333) quad(1.000003)
+xHeight(0.233333f) quad(1.000003f)
 
 METRICS_START
 65, 0.802526, 0.7, 0, 0.229254,

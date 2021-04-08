@@ -2,7 +2,7 @@
 
 DEF_FONT(eufm10, fonts/euler/eufm10.ttf, 0)
 
-xHeight(0.475342) quad(1.0) space(0.333333)
+xHeight(0.475342f) quad(1.0f) space(0.333333f)
 
 bold(eufb10)
 

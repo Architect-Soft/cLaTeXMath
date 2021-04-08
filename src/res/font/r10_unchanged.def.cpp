@@ -2,7 +2,7 @@
 
 DEF_FONT(r10_unchanged, fonts/latin/r10.ttf, 0)
 
-xHeight(0.430555) quad(1.000003) space(0.333334)
+xHeight(0.430555f) quad(1.000003f) space(0.333334f)
 
 METRICS_START
 126, 1.389, 1.9, 0, 0,

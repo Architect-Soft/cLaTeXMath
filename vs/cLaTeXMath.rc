@@ -1,0 +1,137 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RCDATA
+//
+IDR_FONTFILE1               BINARY                    "..\\res\\cyrillic\\cyrillic.map.xml"
+IDR_FONTFILE2               BINARY                    "..\\res\\cyrillic\\language_cyrillic.xml"
+IDR_FONTFILE3               BINARY                    "..\\res\\cyrillic\\mappings_cyrillic.xml"
+IDR_FONTFILE4               BINARY                    "..\\res\\cyrillic\\symbols_cyrillic.xml"
+IDR_FONTFILE5               BINARY                    "..\\res\\cyrillic\\wnbx10.ttf"
+IDR_FONTFILE6               BINARY                    "..\\res\\cyrillic\\wnbx10.xml"
+IDR_FONTFILE7               BINARY                    "..\\res\\cyrillic\\wnbxti10.ttf"
+IDR_FONTFILE8               BINARY                    "..\\res\\cyrillic\\wnbxti10.xml"
+IDR_FONTFILE9               BINARY                    "..\\res\\cyrillic\\wnr10.ttf"
+IDR_FONTFILE10              BINARY                    "..\\res\\cyrillic\\wnr10.xml"
+IDR_FONTFILE11              BINARY                    "..\\res\\cyrillic\\wnss10.ttf"
+IDR_FONTFILE12              BINARY                    "..\\res\\cyrillic\\wnss10.xml"
+IDR_FONTFILE13              BINARY                    "..\\res\\cyrillic\\wnssbx10.ttf"
+IDR_FONTFILE14              BINARY                    "..\\res\\cyrillic\\wnssbx10.xml"
+IDR_FONTFILE15              BINARY                    "..\\res\\cyrillic\\wnssi10.ttf"
+IDR_FONTFILE16              BINARY                    "..\\res\\cyrillic\\wnssi10.xml"
+IDR_FONTFILE17              BINARY                    "..\\res\\cyrillic\\wnti10.ttf"
+IDR_FONTFILE18              BINARY                    "..\\res\\cyrillic\\wnti10.xml"
+IDR_FONTFILE19              BINARY                    "..\\res\\cyrillic\\wntt10.ttf"
+IDR_FONTFILE20              BINARY                    "..\\res\\cyrillic\\wntt10.xml"
+IDR_FONTFILE21              BINARY                    "..\\res\\fonts\\base\\cmex10.ttf"
+IDR_FONTFILE22              BINARY                    "..\\res\\fonts\\base\\cmmi10.ttf"
+IDR_FONTFILE23              BINARY                    "..\\res\\fonts\\base\\cmmib10.ttf"
+IDR_FONTFILE24              BINARY                    "..\\res\\fonts\\euler\\eufb10.ttf"
+IDR_FONTFILE25              BINARY                    "..\\res\\fonts\\euler\\eufm10.ttf"
+IDR_FONTFILE26              BINARY                    "..\\res\\fonts\\latin\\bi10.ttf"
+IDR_FONTFILE27              BINARY                    "..\\res\\fonts\\latin\\bx10.ttf"
+IDR_FONTFILE28              BINARY                    "..\\res\\fonts\\latin\\cmr10.ttf"
+IDR_FONTFILE29              BINARY                    "..\\res\\fonts\\latin\\i10.ttf"
+IDR_FONTFILE30              BINARY                    "..\\res\\fonts\\latin\\r10.ttf"
+IDR_FONTFILE31              BINARY                    "..\\res\\fonts\\latin\\sb10.ttf"
+IDR_FONTFILE32              BINARY                    "..\\res\\fonts\\latin\\sbi10.ttf"
+IDR_FONTFILE33              BINARY                    "..\\res\\fonts\\latin\\si10.ttf"
+IDR_FONTFILE34              BINARY                    "..\\res\\fonts\\latin\\ss10.ttf"
+IDR_FONTFILE35              BINARY                    "..\\res\\fonts\\latin\\tt10.ttf"
+IDR_FONTFILE36              BINARY                    "..\\res\\fonts\\latin\\optional\\cmbx10.ttf"
+IDR_FONTFILE37              BINARY                    "..\\res\\fonts\\latin\\optional\\cmbxti10.ttf"
+IDR_FONTFILE38              BINARY                    "..\\res\\fonts\\latin\\optional\\cmss10.ttf"
+IDR_FONTFILE39              BINARY                    "..\\res\\fonts\\latin\\optional\\cmssbx10.ttf"
+IDR_FONTFILE40              BINARY                    "..\\res\\fonts\\latin\\optional\\cmssi10.ttf"
+IDR_FONTFILE41              BINARY                    "..\\res\\fonts\\latin\\optional\\cmti10.ttf"
+IDR_FONTFILE42              BINARY                    "..\\res\\fonts\\latin\\optional\\cmtt10.ttf"
+IDR_FONTFILE43              BINARY                    "..\\res\\fonts\\maths\\cmbsy10.ttf"
+IDR_FONTFILE44              BINARY                    "..\\res\\fonts\\maths\\cmsy10.ttf"
+IDR_FONTFILE45              BINARY                    "..\\res\\fonts\\maths\\msam10.ttf"
+IDR_FONTFILE46              BINARY                    "..\\res\\fonts\\maths\\msbm10.ttf"
+IDR_FONTFILE47              BINARY                    "..\\res\\fonts\\maths\\rsfs10.ttf"
+IDR_FONTFILE48              BINARY                    "..\\res\\fonts\\maths\\special.ttf"
+IDR_FONTFILE49              BINARY                    "..\\res\\fonts\\maths\\stmary10.ttf"
+IDR_FONTFILE50              BINARY                    "..\\res\\fonts\\maths\\optional\\dsrom10.ttf"
+IDR_FONTFILE51              BINARY                    "..\\res\\greek\\fcmbipg.ttf"
+IDR_FONTFILE52              BINARY                    "..\\res\\greek\\fcmbipg.xml"
+IDR_FONTFILE53              BINARY                    "..\\res\\greek\\fcmbpg.ttf"
+IDR_FONTFILE54              BINARY                    "..\\res\\greek\\fcmbpg.xml"
+IDR_FONTFILE55              BINARY                    "..\\res\\greek\\fcmripg.ttf"
+IDR_FONTFILE56              BINARY                    "..\\res\\greek\\fcmripg.xml"
+IDR_FONTFILE57              BINARY                    "..\\res\\greek\\fcmrpg.ttf"
+IDR_FONTFILE58              BINARY                    "..\\res\\greek\\fcmrpg.xml"
+IDR_FONTFILE59              BINARY                    "..\\res\\greek\\fcsbpg.ttf"
+IDR_FONTFILE60              BINARY                    "..\\res\\greek\\fcsbpg.xml"
+IDR_FONTFILE61              BINARY                    "..\\res\\greek\\fcsropg.ttf"
+IDR_FONTFILE62              BINARY                    "..\\res\\greek\\fcsropg.xml"
+IDR_FONTFILE63              BINARY                    "..\\res\\greek\\fcsrpg.ttf"
+IDR_FONTFILE64              BINARY                    "..\\res\\greek\\fcsrpg.xml"
+IDR_FONTFILE65              BINARY                    "..\\res\\greek\\fctrpg.ttf"
+IDR_FONTFILE66              BINARY                    "..\\res\\greek\\fctrpg.xml"
+IDR_FONTFILE67              BINARY                    "..\\res\\greek\\greek.map.xml"
+IDR_FONTFILE68              BINARY                    "..\\res\\greek\\language_greek.xml"
+IDR_FONTFILE69              BINARY                    "..\\res\\greek\\mappings_greek.xml"
+IDR_FONTFILE70              BINARY                    "..\\res\\greek\\symbols_greek.xml"
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

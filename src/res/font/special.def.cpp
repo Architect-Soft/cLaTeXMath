@@ -2,7 +2,7 @@
 
 DEF_FONT(special, fonts/maths/special.ttf, 0)
 
-xHeight(0.233333) quad(1.000003)
+xHeight(0.233333f) quad(1.000003f)
 
 METRICS_START
 65, 0.705, 0.7, 0.015, 0,

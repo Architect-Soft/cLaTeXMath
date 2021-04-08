@@ -2,7 +2,7 @@
 
 DEF_FONT(cmmi10_unchanged, fonts/base/cmmi10.ttf, 0)
 
-xHeight(0.430555) quad(1.000003) skew(196)
+xHeight(0.430555f) quad(1.000003f) skew(196)
 
 bold(cmmib10_unchanged)
 

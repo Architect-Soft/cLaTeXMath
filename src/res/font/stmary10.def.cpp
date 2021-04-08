@@ -2,7 +2,7 @@
 
 DEF_FONT(stmary10, fonts/maths/stmary10.ttf, 0)
 
-xHeight(0.430555) quad(1.000003)
+xHeight(0.430555f) quad(1.000003f)
 
 METRICS_START
 32, 0.777781, 0.366875, -0.133125, 0,

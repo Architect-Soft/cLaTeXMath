@@ -26,7 +26,7 @@ const int DefaultTeXFont::NONE = -1;
 const int DefaultTeXFont::NUMBERS = 0;
 const int DefaultTeXFont::CAPITAL = 1;
 const int DefaultTeXFont::SMALL   = 2;
-const int DefaultTeXFont::UNICODE = 3;
+const int DefaultTeXFont::SUNICODE = 3;
 /** font information */
 const int DefaultTeXFont::WIDTH  = 0;
 const int DefaultTeXFont::HEIGHT = 1;
@@ -91,7 +91,7 @@ void DefaultTeXFont::addAlphabet(
 void DefaultTeXFont::addAlphabet(AlphabetRegistration* reg) {
   try {
     addAlphabet(reg->getPackage(), reg->getUnicodeBlock(), reg->getTeXFontFile());
-  } catch (ex_font_loaded& e) {
+  } catch (ex_font_loaded& ) {
   } catch (ex_alphabet_registration& e) {
 #ifdef HAVE_LOG
     __dbg("%s", e.what());
@@ -123,7 +123,7 @@ Char DefaultTeXFont::getChar(wchar_t c, _in_ const vector<CharFont*>& cf, int st
     kind   = CAPITAL;
     offset = c - 'A';
   } else {
-    kind   = UNICODE;
+    kind   = SUNICODE;
     offset = c;
   }
   // if no mapping for the character's range, then use the default style
@@ -249,7 +249,7 @@ sptr<CharFont> DefaultTeXFont::getLigature(_in_ const CharFont& left, _in_ const
 }
 
 int DefaultTeXFont::getMuFontId() {
-  return _generalSettings[DefaultTeXFontParser::MUFONTID_ATTR];
+  return static_cast<int>(_generalSettings[DefaultTeXFontParser::MUFONTID_ATTR]);
 }
 
 Char DefaultTeXFont::getNextLarger(_in_ const Char& c, int style) {

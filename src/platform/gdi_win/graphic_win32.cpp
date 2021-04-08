@@ -1,11 +1,14 @@
 #include "config.h"
+#include "..\..\..\vs\resource.h"
 
 #if defined(BUILD_WIN32) && !defined(MEM_CHECK)
 
-#include <windows.h>
+#include <Windows.h>
 #include <gdiplus.h>
+#pragma comment (lib,"Gdiplus.lib")
 
 #include <sstream>
+#include <unordered_map>
 
 #include "platform/gdi_win/graphic_win32.h"
 
@@ -74,12 +77,97 @@ Font_win32::Font_win32(const string& name, int style, float size) : _size(size) 
   _typeface = sptr<Gdiplus::Font>(tf);
 }
 
+std::unordered_map<std::wstring, int> gFontList = {
+	{ L"res/cyrillic/cyrillic.map.xml" , 101 },
+	{ L"res/cyrillic/language_cyrillic.xml", 102 },
+	{ L"res/cyrillic/mappings_cyrillic.xml", 103 },
+	{ L"res/cyrillic/symbols_cyrillic.xml", 104 },
+	{ L"res/cyrillic/wnbx10.ttf", 105 },
+	{ L"res/cyrillic/wnbx10.xml", 106 },
+	{ L"res/cyrillic/wnbxti10.ttf", 107 },
+	{ L"res/cyrillic/wnbxti10.xml", 108 },
+	{ L"res/cyrillic/wnr10.ttf", 109 },
+	{ L"res/cyrillic/wnr10.xml", 110 },
+	{ L"res/cyrillic/wnss10.ttf", 111 },
+	{ L"res/cyrillic/wnss10.xml", 112 },
+	{ L"res/cyrillic/wnssbx10.ttf", 113 },
+	{ L"res/cyrillic/wnssbx10.xml", 114 },
+	{ L"res/cyrillic/wnssi10.ttf", 115 },
+	{ L"res/cyrillic/wnssi10.xml", 116 },
+	{ L"res/cyrillic/wnti10.ttf", 117 },
+	{ L"res/cyrillic/wnti10.xml", 118 },
+	{ L"res/cyrillic/wntt10.ttf", 119 },
+	{ L"res/cyrillic/wntt10.xml", 120 },
+	{ L"res/fonts/base/cmex10.ttf", 121 },
+	{ L"res/fonts/base/cmmi10.ttf", 122 },
+	{ L"res/fonts/base/cmmib10.ttf", 123 },
+	{ L"res/fonts/euler/eufb10.ttf", 124 },
+	{ L"res/fonts/euler/eufm10.ttf", 125 },
+	{ L"res/fonts/latin/bi10.ttf", 126 },
+	{ L"res/fonts/latin/bx10.ttf", 127 },
+	{ L"res/fonts/latin/cmr10.ttf", 128 },
+	{ L"res/fonts/latin/i10.ttf", 129 },
+	{ L"res/fonts/latin/r10.ttf", 130 },
+	{ L"res/fonts/latin/sb10.ttf", 131 },
+	{ L"res/fonts/latin/sbi10.ttf", 132 },
+	{ L"res/fonts/latin/si10.ttf", 133 },
+	{ L"res/fonts/latin/ss10.ttf", 134 },
+	{ L"res/fonts/latin/tt10.ttf", 135 },
+	{ L"res/fonts/latin/optional/cmbx10.ttf", 136 },
+	{ L"res/fonts/latin/optional/cmbxti10.ttf", 137 },
+	{ L"res/fonts/latin/optional/cmss10.ttf", 138 },
+	{ L"res/fonts/latin/optional/cmssbx10.ttf", 139 },
+	{ L"res/fonts/latin/optional/cmssi10.ttf", 140 },
+	{ L"res/fonts/latin/optional/cmti10.ttf", 141 },
+	{ L"res/fonts/latin/optional/cmtt10.ttf", 142 },
+	{ L"res/fonts/maths/cmbsy10.ttf", 143 },
+	{ L"res/fonts/maths/cmsy10.ttf", 144 },
+	{ L"res/fonts/maths/msam10.ttf", 145 },
+	{ L"res/fonts/maths/msbm10.ttf", 146 },
+	{ L"res/fonts/maths/rsfs10.ttf", 147 },
+	{ L"res/fonts/maths/special.ttf", 148 },
+	{ L"res/fonts/maths/stmary10.ttf", 149 },
+	{ L"res/fonts/maths/optional/dsrom10.ttf", 150 },
+	{ L"res/greek/fcmbipg.ttf", 151 },
+	{ L"res/greek/fcmbipg.xml", 152 },
+	{ L"res/greek/fcmbpg.ttf", 153 },
+	{ L"res/greek/fcmbpg.xml", 154 },
+	{ L"res/greek/fcmripg.ttf", 155 },
+	{ L"res/greek/fcmripg.xml", 156 },
+	{ L"res/greek/fcmrpg.ttf", 157 },
+	{ L"res/greek/fcmrpg.xml", 158 },
+	{ L"res/greek/fcsbpg.ttf", 159 },
+	{ L"res/greek/fcsbpg.xml", 160 },
+	{ L"res/greek/fcsropg.ttf", 161 },
+	{ L"res/greek/fcsropg.xml", 162 },
+	{ L"res/greek/fcsrpg.ttf", 163 },
+	{ L"res/greek/fcsrpg.xml", 164 },
+	{ L"res/greek/fctrpg.ttf", 165 },
+	{ L"res/greek/fctrpg.xml", 166 },
+	{ L"res/greek/greek.map.xml", 167 },
+	{ L"res/greek/language_greek.xml", 168 },
+	{ L"res/greek/mappings_greek.xml", 169 },
+	{ L"res/greek/symbols_greek.xml", 170 }
+};
+
 Font_win32::Font_win32(const string& file, float size) {
   // add font to font collection
   // some like fontconfig
   Gdiplus::PrivateFontCollection c;
-  wstring wfile = utf82wide(file.c_str());
-  c.AddFontFile(wfile.c_str());
+  const wstring wfile = utf82wide(file.c_str());
+
+  const auto lIt = gFontList.find(wfile);
+  if (lIt == gFontList.end())
+      throw ex_invalid_state("cannot load font file " + file);
+
+  // Searches the given resource
+  auto* const lResourceHandle = ::FindResourceA(nullptr, MAKEINTRESOURCEA(lIt->second), "BINARY");
+  auto* const lGlobalHandle = ::LoadResource(nullptr, lResourceHandle);
+
+  c.AddMemoryFont(::LockResource(lGlobalHandle), ::SizeofResource(nullptr, lResourceHandle));
+	
+  //c.AddFontFile(wfile.c_str());
+	
   Gdiplus::FontFamily* ff = new Gdiplus::FontFamily();
   int num = 0;
   c.GetFamilies(1, ff, &num);

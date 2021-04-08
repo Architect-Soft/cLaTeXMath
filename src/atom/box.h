@@ -123,7 +123,7 @@ public:
   void add(int pos, const sptr<Box>& b) override;
 
   inline int getSize() const {
-    return _children.size();
+    return static_cast<int>(_children.size());
   }
 
   void draw(Graphics2D& g2, float x, float y) override;
@@ -537,9 +537,9 @@ public:
     _depth = rowdepth;
     _width = width;
     if (base->_width < 0) _width += base->_width;
-    if (align == ALIGN_RIGHT) {
+    if (static_cast<int>(align) == ALIGN_RIGHT) {
       _l = width - _base->_width;
-    } else if (align == ALIGN_CENTER) {
+    } else if (static_cast<int>(align) == ALIGN_CENTER) {
       _l = (width - _base->_width) / 2.f;
     }
   }

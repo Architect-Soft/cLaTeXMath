@@ -2,7 +2,7 @@
 
 DEF_FONT(cmmib10_unchanged, fonts/base/cmmib10.ttf, 0)
 
-xHeight(0.444445) quad(1.149994)
+xHeight(0.444445f) quad(1.149994f)
 
 METRICS_START
 33, 0.717819, 0.444445, 0, 0.037038,

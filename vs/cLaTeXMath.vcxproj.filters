@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\atom">
+      <UniqueIdentifier>{96e4d87c-1194-4fe7-9032-428b56c1f213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{198f220d-3003-4d80-8810-dfba50a492d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fonts">
+      <UniqueIdentifier>{cae554cf-b98f-4ce1-a9c1-0f23bc6f9c06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphic">
+      <UniqueIdentifier>{91490efa-a938-4dfe-9efc-54a42ab638fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform">
+      <UniqueIdentifier>{a910664f-d048-460b-b0f2-7b246eaf08a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{7e18b9c2-a577-4cd7-92e2-84eaed203e7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\xml">
+      <UniqueIdentifier>{a6b884f6-6e6e-4a6a-a612-01518ebe9ebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\res">
+      <UniqueIdentifier>{ad2c08ab-9650-4571-b6a2-e3a8b34dde90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\res\builtin">
+      <UniqueIdentifier>{a37ebc4b-d9c2-4614-ba5b-d9c31353b1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\res\font">
+      <UniqueIdentifier>{a9f178f3-2c5b-4f64-b6bb-20778dbde092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\res\parser">
+      <UniqueIdentifier>{74e7885a-41af-411b-a871-335c3543e49f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\res\reg">
+      <UniqueIdentifier>{944f70e7-e281-4ac4-8fd7-e2fd4a68447d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\res\sym">
+      <UniqueIdentifier>{dc44e737-f3a8-48a8-8a20-b9f3ce565783}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\atom\atom.h">
+      <Filter>Source Files\atom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\atom\atom_basic.h">
+      <Filter>Source Files\atom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\atom\atom_impl.h">
+      <Filter>Source Files\atom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\atom\box.h">
+      <Filter>Source Files\atom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\core.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\formula.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\macro.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\macro_impl.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\parser.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fonts\alphabet.h">
+      <Filter>Source Files\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fonts\font_basic.h">
+      <Filter>Source Files\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fonts\font_info.h">
+      <Filter>Source Files\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fonts\font_reg.h">
+      <Filter>Source Files\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fonts\fonts.h">
+      <Filter>Source Files\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fonts\symbol_reg.h">
+      <Filter>Source Files\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fonts\tex_font.h">
+      <Filter>Source Files\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\graphic\graphic.h">
+      <Filter>Source Files\graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\graphic\graphic_basic.h">
+      <Filter>Source Files\graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\platform\gdi_win\graphic_win32.h">
+      <Filter>Source Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\constants.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\exceptions.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\indexed_arr.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\log.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\nums.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\string_utils.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\utf.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\xml\tinyxml2.h">
+      <Filter>Source Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\config.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\latex.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\res\parser\font_parser.h">
+      <Filter>Source Files\res\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\res\parser\formula_parser.h">
+      <Filter>Source Files\res\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\res\reg\builtin_font_reg.h">
+      <Filter>Source Files\res\reg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\res\reg\builtin_syms_reg.h">
+      <Filter>Source Files\res\reg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\res\font_def.res.h">
+      <Filter>Source Files\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\res\symbol_def.res.h">
+      <Filter>Source Files\res</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\atom\atom_basic.cpp">
+      <Filter>Source Files\atom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\atom\atom_impl.cpp">
+      <Filter>Source Files\atom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\atom\box.cpp">
+      <Filter>Source Files\atom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\atom\colors_def.cpp">
+      <Filter>Source Files\atom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\core.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\formula.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\formula_def.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\localized_num.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\macro.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\macro_def.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\macro_impl.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\parser.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fonts\alphabet.cpp">
+      <Filter>Source Files\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fonts\font_basic.cpp">
+      <Filter>Source Files\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fonts\font_info.cpp">
+      <Filter>Source Files\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fonts\fonts.cpp">
+      <Filter>Source Files\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\platform\gdi_win\graphic_win32.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\xml\tinyxml2.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\latex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\builtin\formula_mappings.res.cpp">
+      <Filter>Source Files\res\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\builtin\glue.res.cpp">
+      <Filter>Source Files\res\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\builtin\symbol_mapping.res.cpp">
+      <Filter>Source Files\res\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\builtin\tex_param.res.cpp">
+      <Filter>Source Files\res\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\builtin\tex_symbols.res.cpp">
+      <Filter>Source Files\res\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\bi10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\bx10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmbsy10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmbx10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmbxti10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmex10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmmi10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmmi10_unchanged.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmmib10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmmib10_unchanged.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmr10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmss10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmssbx10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmssi10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmsy10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmti10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmti10_unchanged.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\cmtt10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\dsrom10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\eufb10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\eufm10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\i10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\moustache.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\msam10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\msbm10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\r10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\r10_unchanged.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\rsfs10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\sb10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\sbi10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\si10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\special.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\ss10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\stmary10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\font\tt10.def.cpp">
+      <Filter>Source Files\res\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\parser\font_parser.cpp">
+      <Filter>Source Files\res\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\parser\formula_parser.cpp">
+      <Filter>Source Files\res\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\reg\builtin_font_reg.cpp">
+      <Filter>Source Files\res\reg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\reg\builtin_syms_reg.cpp">
+      <Filter>Source Files\res\reg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\sym\amsfonts.def.cpp">
+      <Filter>Source Files\res\sym</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\sym\amssymb.def.cpp">
+      <Filter>Source Files\res\sym</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\sym\base.def.cpp">
+      <Filter>Source Files\res\sym</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\sym\special.def.cpp">
+      <Filter>Source Files\res\sym</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\res\sym\stmaryrd.def.cpp">
+      <Filter>Source Files\res\sym</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cLaTeXMath.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

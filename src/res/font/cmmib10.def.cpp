@@ -2,7 +2,7 @@
 
 DEF_FONT(cmmib10, fonts/base/cmmib10.ttf, 0)
 
-xHeight(0.444445) quad(1.149994)
+xHeight(0.444445f) quad(1.149994f)
 
 roman(cmbx10) ss(cmssbx10) tt(cmtt10) it(cmbxti10)
 

@@ -456,7 +456,7 @@ public:
     float space = INTERSPACE * SpaceAtom::getFactor(UNIT_EM, env);
     float sspace = 1.5f * drt + 0.5f * SpaceAtom::getFactor(UNIT_POINT, env);
     return sptr<Box>(new FramedBox(
-        sptr<Box>(new FramedBox(bbase, 0.75 * drt, space)), 1.5f * drt, sspace));
+        sptr<Box>(new FramedBox(bbase, 0.75f * drt, space)), 1.5f * drt, sspace));
   }
 
   __decl_clone(DoubleFramedAtom)

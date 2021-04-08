@@ -2,7 +2,7 @@
 
 DEF_FONT(eufb10, fonts/euler/eufb10.ttf, 0)
 
-xHeight(0.475342) quad(1.0) space(0.333333)
+xHeight(0.475342f) quad(1.0f) space(0.333333f)
 
 METRICS_START
 33, 0.349205, 0.691406, 0, 0,

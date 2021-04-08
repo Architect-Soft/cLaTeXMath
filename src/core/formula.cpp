@@ -52,7 +52,7 @@ TeXFormula::TeXFormula(
   if (tp.getIsPartial()) {
     try {
       _parser.parse();
-    } catch (exception& e) {
+    } catch (exception&) {
       if (_root == nullptr) _root = sptr<Atom>(new EmptyAtom());
     }
   } else {
@@ -68,7 +68,7 @@ TeXFormula::TeXFormula(
   if (tp.getIsPartial()) {
     try {
       _parser.parse();
-    } catch (exception& e) {
+    } catch (exception&) {
       if (_root == nullptr) _root = sptr<Atom>(new EmptyAtom());
     }
   } else {
@@ -83,7 +83,7 @@ TeXFormula::TeXFormula(const TeXParser& tp, const wstring& s, bool firstpass)
   if (tp.getIsPartial()) {
     try {
       _parser.parse();
-    } catch (exception& e) {}
+    } catch (exception&) {}
   } else {
     _parser.parse();
   }
@@ -96,7 +96,7 @@ TeXFormula::TeXFormula(const TeXParser& tp, const wstring& s)
   if (tp.getIsPartial()) {
     try {
       _parser.parse();
-    } catch (exception& e) {
+    } catch (exception&) {
       if (_root == nullptr) _root = sptr<Atom>(new EmptyAtom());
     }
   } else {

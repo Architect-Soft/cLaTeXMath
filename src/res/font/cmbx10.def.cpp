@@ -2,7 +2,7 @@
 
 DEF_FONT(cmbx10, fonts/latin/optional/cmbx10.ttf, 0)
 
-xHeight(0.444445) quad(1.149994) space(0.383331)
+xHeight(0.444445f) quad(1.149994f) space(0.383331f)
 
 ss(cmssbx10) tt(cmtt10) it(cmbxti10)
 

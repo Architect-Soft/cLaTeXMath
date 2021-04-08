@@ -2,7 +2,7 @@
 
 DEF_FONT(dsrom10, fonts/maths/optional/dsrom10.ttf, 0)
 
-xHeight(0.462964) quad(1.0) space(0.300003)
+xHeight(0.462964f) quad(1.0f) space(0.300003f)
 
 METRICS_START
 49, 0.611113, 0.644444, 0, 0,

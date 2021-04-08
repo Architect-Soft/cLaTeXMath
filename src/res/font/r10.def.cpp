@@ -2,7 +2,7 @@
 
 DEF_FONT(r10, fonts/latin/r10.ttf, 0)
 
-xHeight(0.430555) quad(1.000003) space(0.333334)
+xHeight(0.430555f) quad(1.000003f) space(0.333334f)
 
 bold(bx10) ss(ss10) tt(tt10) it(i10)
 

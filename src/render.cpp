@@ -61,7 +61,7 @@ void TeXRender::setInsets(const Insets& insets, bool trueval) {
 }
 
 void TeXRender::setWidth(int width, int align) {
-  float diff = width - getWidth();
+  float diff = static_cast<float>(width) - static_cast<float>(getWidth());
   // FIXME
   // only care if new width larger than old
   if (diff > 0) {

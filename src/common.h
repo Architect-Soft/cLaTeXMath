@@ -68,7 +68,7 @@ inline std::string demangle_name(const char* name) {
 template <class T>
 inline int indexOf(const std::vector<T>& v, const T& x) {
   auto it = find(v.begin(), v.end(), x);
-  int i = std::distance(v.begin(), it);
+  int i = (int)std::distance(v.begin(), it);
   return (i >= v.size() ? -1 : i);
 }
 

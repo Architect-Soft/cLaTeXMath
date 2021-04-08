@@ -23,7 +23,7 @@ const map<string, int> DefaultTeXFontParser::_rangeTypeMappings = {
     {"numbers", DefaultTeXFont::NUMBERS},
     {"capitals", DefaultTeXFont::CAPITAL},
     {"small", DefaultTeXFont::SMALL},
-    {"unicode", DefaultTeXFont::UNICODE},
+    {"unicode", DefaultTeXFont::SUNICODE},
 };  // range mapping
 
 const map<string, ChildParser> DefaultTeXFontParser::_charChildParsers = {

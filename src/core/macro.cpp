@@ -65,7 +65,7 @@ void NewCommandMacro::addRenewCommand(
 void NewCommandMacro::execute(_out_ TeXParser& tp, _out_ vector<wstring>& args) {
   wstring code = _macrocode[args[0]];
   wstring rep;
-  int nbargs = args.size() - 12;
+  int nbargs = static_cast<int>(args.size()) - 12;
   int dec = 0;
 
   auto it = _macroreplacement.find(args[0]);

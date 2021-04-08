@@ -351,7 +351,7 @@ public:
   }
 
   inline void finish() {
-    _pos = _parseString.size();
+    _pos = static_cast<int>(_parseString.size());
   }
 
   std::wstring forwardFromCurrentPos();

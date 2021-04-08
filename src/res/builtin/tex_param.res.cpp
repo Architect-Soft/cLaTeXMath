@@ -30,8 +30,8 @@ std::map<std::string, float> tex::DefaultTeXFont::_parameters = {
 
 void tex::DefaultTeXFont::__default_general_settings() {
   tex::DefaultTeXFont::_generalSettings = {
-      {"mufontid", __id(cmsy10)},
-      {"spacefontid", __id(cmr10)},
+      {"mufontid", static_cast<float>(__id(cmsy10))},
+      {"spacefontid", static_cast<float>(__id(cmr10))},
       {"textfactor", 1.f},
       {"scriptfactor", 0.7f},
       {"scriptscriptfactor", 0.5f},

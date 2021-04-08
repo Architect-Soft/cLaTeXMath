@@ -2,7 +2,7 @@
 
 DEF_FONT(cmtt10, fonts/latin/optional/cmtt10.ttf, 0)
 
-xHeight(0.430555) quad(1.049991) space(0.524996)
+xHeight(0.430555f) quad(1.049991f) space(0.524996f)
 
 METRICS_START
 33, 0.524996, 0.611112, 0, 0,

@@ -2,7 +2,7 @@
 
 DEF_FONT(sb10, fonts/latin/sb10.ttf, 0)
 
-xHeight(0.0) quad(1.000003) space(0.333334)
+xHeight(0.0f) quad(1.000003f) space(0.333334f)
 
 roman(bx10) tt(tt10) it(sbi10)
 

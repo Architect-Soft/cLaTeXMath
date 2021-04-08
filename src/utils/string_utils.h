@@ -8,6 +8,7 @@
 #include <sstream>
 #include <string>
 #include <functional>
+#include <cwctype>
 
 namespace tex {
 
@@ -56,12 +57,12 @@ inline bool str2int(const std::string& str, int& res, int radix) {
 
 /** Transform a string to lowercase */
 inline std::string& tolower(std::string& src) {
-  std::transform(src.begin(), src.end(), src.begin(), ::tolower);
+  std::transform(src.begin(), src.end(), src.begin(), [](const char c) -> char { return static_cast<char>(std::tolower(c)); } );
   return src;
 }
 
 inline std::wstring& tolower(std::wstring& src) {
-  std::transform(src.begin(), src.end(), src.begin(), ::tolower);
+  std::transform(src.begin(), src.end(), src.begin(), [](const wchar_t c) -> wchar_t { return static_cast<wchar_t>(std::towlower(c)); });
   return src;
 }
 
@@ -139,7 +140,7 @@ public:
   int count_tokens() {
     int c = 0;
     bool in = false;
-    for (int i = _pos, len = _str.length(); i < len; i++) {
+    for (int i = _pos, len = static_cast<int>(_str.length()); i < len; i++) {
       if (_del.find(_str[i]) != std::string::npos) {
         if (_ret) c++;
         if (in) {
@@ -156,7 +157,7 @@ public:
 
   std::string next_token() {
     int i = _pos;
-    int len = _str.length();
+    int len = static_cast<int>(_str.length());
 
     if (i < len) {
       if (_ret) {

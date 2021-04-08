@@ -2,7 +2,7 @@
 
 DEF_FONT(cmsy10, fonts/maths/cmsy10.ttf, 0)
 
-xHeight(0.430555) quad(1.000003) skew(48)
+xHeight(0.430555f) quad(1.000003f) skew(48)
 
 bold(cmbsy10)
 

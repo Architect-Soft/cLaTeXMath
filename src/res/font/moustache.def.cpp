@@ -2,7 +2,7 @@
 
 DEF_FONT(moustache, fonts/base/cmex10.ttf, 0)
 
-xHeight(0.430555) quad(1.000003)
+xHeight(0.430555f) quad(1.000003f)
 
 METRICS_START
 56, 0.888891, 0, 0.900009, 0,

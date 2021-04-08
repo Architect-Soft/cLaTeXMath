@@ -2,7 +2,7 @@
 
 DEF_FONT(msam10, fonts/maths/msam10.ttf, 0)
 
-xHeight(0.430555) quad(1.000003)
+xHeight(0.430555f) quad(1.000003f)
 
 METRICS_START
 33, 1.388893, 0.377882, -0.133125, 0,

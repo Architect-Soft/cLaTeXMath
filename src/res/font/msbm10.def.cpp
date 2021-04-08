@@ -2,7 +2,7 @@
 
 DEF_FONT(msbm10, fonts/maths/msbm10.ttf, 0)
 
-xHeight(0.462964) quad(1.0) space(0.300003)
+xHeight(0.462964f) quad(1.0f) space(0.300003f)
 
 METRICS_START
 33, 0.777781, 0.635971, 0.135971, 0,

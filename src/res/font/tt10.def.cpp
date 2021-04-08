@@ -2,7 +2,7 @@
 
 DEF_FONT(tt10, fonts/latin/tt10.ttf, 0)
 
-xHeight(0.0) quad(1.000003) space(0.333334)
+xHeight(0.0) quad(1.000003f) space(0.333334f)
 
 METRICS_START
 33, 0.516, 0.441, 0, 0,

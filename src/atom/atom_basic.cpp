@@ -303,7 +303,7 @@ sptr<Box> SymbolAtom::createBox(_out_ TeXEnvironment& env) {
       try {
         sptr<Box> cx(new CharBox(tf.getChar(name, style)));
         cb = sptr<Box>(new ScaleBox(cx, 0.8f, 0.8f));
-      } catch (ex_symbol_mapping_not_found& e) {}
+      } catch (ex_symbol_mapping_not_found&) {}
     }
   }
   if (_type == TYPE_BIG_OPERATOR) {
@@ -460,7 +460,7 @@ sptr<Box> RowAtom::createBox(_out_ TeXEnvironment& env) {
   env.reset();
 
   // convert atoms to boxes and add to the horizontal box
-  int e = _elements.size() - 1;
+  int e = static_cast<int>(_elements.size()) - 1;
   for (int i = -1; i < e;) {
     auto at = _elements[++i];
     bool markAdded = false;
@@ -522,11 +522,11 @@ sptr<Box> RowAtom::createBox(_out_ TeXEnvironment& env) {
 
     if (_canBreak) {
       if (_breakEveywhere) {
-        hbox->addBreakPosition(hbox->_children.size());
+        hbox->addBreakPosition(static_cast<int>(hbox->_children.size()));
       } else {
         auto ca = dynamic_cast<CharAtom*>(at.get());
         if (markAdded || (ca != nullptr && isdigit(ca->getCharacter()))) {
-          hbox->addBreakPosition(hbox->_children.size());
+          hbox->addBreakPosition(static_cast<int>(hbox->_children.size()));
         }
       }
     }
@@ -600,7 +600,7 @@ sptr<Box> VRowAtom::createBox(_out_ TeXEnvironment& env) {
   if (_halign != ALIGN_NONE) {
     float maxWidth = F_MIN;
     vector<sptr<Box>> boxes;
-    const int s = _elements.size();
+    const int s = static_cast<int>(_elements.size());
     // find the width of the widest box
     for (int i = 0; i < s; i++) {
       sptr<Box> box = _elements[i]->createBox(env);
@@ -616,7 +616,7 @@ sptr<Box> VRowAtom::createBox(_out_ TeXEnvironment& env) {
     }
   } else {
     // convert atoms to boxes and add to the vertical box
-    const int s = _elements.size();
+    const int s = static_cast<int>(_elements.size());
     for (int i = 0; i < s; i++) {
       vb->add(_elements[i]->createBox(env));
       if (_addInterline && i < s - 1) vb->add(interline);
@@ -1079,7 +1079,7 @@ sptr<Box> ScriptsAtom::createBox(_out_ TeXEnvironment& env) {
       // too small
       shiftUp += 4 * drt - interspace;
       // set bottom super script at least 4/5 of X-height above baseline
-      float psi = 0.8 * abs(tf->getXHeight(style, lastFontId)) - (shiftUp - x->_depth);
+      float psi = 0.8f * abs(tf->getXHeight(style, lastFontId)) - (shiftUp - x->_depth);
 
       if (psi > 0) {
         shiftUp += psi;

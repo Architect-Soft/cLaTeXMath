@@ -953,7 +953,7 @@ sptr<Atom> TeXParser::convertCharacter(wchar_t c, bool oneChar) {
    */
   if ((c < '0' || c > '9') && (c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) {
     /*
-       * Find from registered UNICODE-table
+       * Find from registered SUNICODE-table
        */
     const UnicodeBlock& block = UnicodeBlock::of(c);
 #ifdef HAVE_LOG
@@ -998,7 +998,7 @@ sptr<Atom> TeXParser::convertCharacter(wchar_t c, bool oneChar) {
       }
 
       if (!_isPartial)
-        throw ex_parse("Unknown character : '" + tostring(c) + "'");
+        throw ex_parse("Unknown character : '" + tostring((int)c) + "'");
       else {
         if (_hideUnknownChar) return nullptr;
         sptr<Atom> rm(new RomanAtom(
@@ -1030,7 +1030,7 @@ sptr<Atom> TeXParser::convertCharacter(wchar_t c, bool oneChar) {
           return SymbolAtom::get(symbolName);
         } catch (ex_symbol_not_found& e) {
           throw ex_parse(
-              "The character '" + tostring(c) +
+              "The character '" + tostring((int)c) +
                   "' was mapped to an unknown symbol with the name '" + symbolName + "'!",
               e);
         }

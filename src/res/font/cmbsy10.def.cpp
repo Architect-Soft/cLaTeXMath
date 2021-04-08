@@ -2,7 +2,7 @@
 
 DEF_FONT(cmbsy10, fonts/maths/cmbsy10.ttf, 0)
 
-xHeight(0.444445) quad(1.149994)
+xHeight(0.444445f) quad(1.149994f)
 
 METRICS_START
 33, 1.149994, 0.391111, -0.108889, 0,
