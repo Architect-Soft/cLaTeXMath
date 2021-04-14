@@ -248,7 +248,7 @@ public:
 
 class ArrayOfAtoms : public TeXFormula {
 private:
-    size_t _row, _col;
+    size_t _row = 0, _col = 0;
 
 public:
     std::vector<std::vector<sptr<Atom>>> _array;

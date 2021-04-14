@@ -8,9 +8,6 @@
 #include "common.h"
 #include "graphic/graphic.h"
 
-using namespace std;
-using namespace tex;
-
 namespace Gdiplus {
 
 class Font;
@@ -40,9 +37,9 @@ public:
   sptr<Gdiplus::Font> _typeface;
   const Gdiplus::FontFamily* _family;
 
-  Font_win32(const string& name, int style, float size);
+  Font_win32(const std::string& name, int style, float size);
 
-  Font_win32(const string& file, float size);
+  Font_win32(const std::string& file, float size);
 
   virtual float getSize() const override;
 
@@ -62,14 +59,14 @@ public:
 class TextLayout_win32 : public TextLayout {
 private:
   sptr<Font_win32> _font;
-  wstring _txt;
+  std::wstring _txt;
 
 public:
   static const Gdiplus::StringFormat* _format;
   static Gdiplus::Graphics* _g;
   static Gdiplus::Bitmap* _img;
 
-  TextLayout_win32(const wstring& src, const sptr<Font_win32>& font);
+  TextLayout_win32(const std::wstring& src, const sptr<Font_win32>& font);
 
   virtual void getBounds(_out_ Rect& bounds) override;
 
@@ -127,7 +124,7 @@ public:
 
   virtual void drawChar(wchar_t c, float x, float y) override;
 
-  virtual void drawText(const wstring& c, float x, float y) override;
+  virtual void drawText(const std::wstring& c, float x, float y) override;
 
   virtual void drawLine(float x1, float y1, float x2, float y2) override;
 
