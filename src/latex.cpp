@@ -109,8 +109,10 @@ void LaTeX::release() {
   NewCommandMacro::_free_();
   TextRenderingBox::_free_();
 
-  if (_formula != nullptr) delete _formula;
-  if (_builder != nullptr) delete _builder;
+  delete _formula;
+  _formula = nullptr;
+  delete _builder;
+  _builder = nullptr;
 }
 
 const string& LaTeX::getResRootPath() {

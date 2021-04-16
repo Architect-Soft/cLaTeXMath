@@ -260,6 +260,7 @@ void TeXFormula::addSymbolMappings(const string& file) {
 
 void TeXFormula::_free_() {
   for (auto i : _externalFontMap) delete i.second;
+  _externalFontMap.clear();
 }
 
 /*************************************** ArrayOfAtoms implementation ******************************/

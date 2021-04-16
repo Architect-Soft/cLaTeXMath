@@ -119,6 +119,9 @@ void NewEnvironmentMacro::addRenewEnvironment(
 
 void NewCommandMacro::_free_() {
   delete _instance;
+  _instance = new NewCommandMacro();
+  _macrocode.clear();
+  _macroreplacement.clear();
 }
 
 void MacroInfo::addMacro(const wstring& name, MacroInfo* mac) {
@@ -129,6 +132,7 @@ void MacroInfo::addMacro(const wstring& name, MacroInfo* mac) {
 
 void MacroInfo::_free_() {
   for (auto i : _commands) delete i.second;
+  _commands.clear();
 }
 
 sptr<Atom> PredefMacroInfo::invoke(
