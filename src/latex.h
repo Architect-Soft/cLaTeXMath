@@ -54,7 +54,7 @@ public:
    * @param fg
    *      the foreground color
    */
-  static TeXRender* parse(const std::wstring& tex, int width, float textSize, float lineSpace, color fg);
+  static TeXRender* parse(const std::wstring& tex, int width, float textSize, float lineSpace, color fg, int type);
 
   /**
    * Release the LaTeX context

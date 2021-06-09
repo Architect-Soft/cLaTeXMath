@@ -123,7 +123,7 @@ void LaTeX::setDebug(bool debug) {
   TeXFormula::setDEBUG(debug);
 }
 
-TeXRender* LaTeX::parse(const wstring& latex, int width, float textSize, float lineSpace, color fg) {
+TeXRender* LaTeX::parse(const wstring& latex, int width, float textSize, float lineSpace, color fg, int type) {
   bool lined = true;
   if (startswith(latex, L"$$") || startswith(latex, L"\\[")) {
     lined = false;
@@ -136,6 +136,7 @@ TeXRender* LaTeX::parse(const wstring& latex, int width, float textSize, float l
                           .setIsMaxWidth(lined)
                           .setLineSpace(UNIT_PIXEL, lineSpace)
                           .setForeground(fg)
+						  .setType(type)
                           .build(*_formula);
   return render;
 }
